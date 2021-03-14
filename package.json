@@ -1,7 +1,8 @@
 {
-  "name": "hodotsvideoplayer",
-  "version": "0.3.2",
-  "private": true,
+  "name": "@leafstudiosteam/hodotsvideoplayer",
+  "version": "0.3.3",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -52,5 +53,20 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2"
-  }
+  },
+  "description": "A video player for hodots.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leafstudiosteam/hodotsVideoPlayer.git"
+  },
+  "keywords": [
+    "videoplayer",
+    "reactjs"
+  ],
+  "author": "tuxpenguin09",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/leafstudiosteam/hodotsVideoPlayer/issues"
+  },
+  "homepage": "https://github.com/leafstudiosteam/hodotsVideoPlayer#readme"
 }
