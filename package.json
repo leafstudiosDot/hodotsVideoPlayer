@@ -1,6 +1,6 @@
 {
   "name": "hodotsvideoplayer",
-  "version": "0.1.0",
+  "version": "0.3.2",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -15,7 +15,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "build-lib": "rollup -c"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +37,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/node-logger": "^6.1.21",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.1.21",
+    "rollup": "^2.41.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
