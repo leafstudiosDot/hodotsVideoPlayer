@@ -117,15 +117,15 @@ function _createSuper(Derived) {
  * @param {Number} maxHeight Maximum height of the video viewport
  */
 
-var AppVideoPlayer = /*#__PURE__*/function (_Component) {
-  _inherits(AppVideoPlayer, _Component);
+var VideoPlayer = /*#__PURE__*/function (_Component) {
+  _inherits(VideoPlayer, _Component);
 
-  var _super = _createSuper(AppVideoPlayer);
+  var _super = _createSuper(VideoPlayer);
 
-  function AppVideoPlayer(props) {
+  function VideoPlayer(props) {
     var _this;
 
-    _classCallCheck(this, AppVideoPlayer);
+    _classCallCheck(this, VideoPlayer);
 
     _this = _super.call(this, props);
     _this.videoPause = _this.videoPause.bind(_assertThisInitialized(_this));
@@ -137,7 +137,7 @@ var AppVideoPlayer = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(AppVideoPlayer, [{
+  _createClass(VideoPlayer, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       window.addEventListener('keydown', this.KeySettingVideo);
@@ -362,7 +362,7 @@ var AppVideoPlayer = /*#__PURE__*/function (_Component) {
     }
   }]);
 
-  return AppVideoPlayer;
+  return VideoPlayer;
 }(React.Component);
 
-exports.VideoPlayer = AppVideoPlayer;
+exports.VideoPlayer = VideoPlayer;

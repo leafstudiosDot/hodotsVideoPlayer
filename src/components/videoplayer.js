@@ -8,7 +8,7 @@ import './videoplayer.css'
  * @param {string} placeholder Placeholder of the video, Thumbnail is the default one
  * @param {Number} maxHeight Maximum height of the video viewport
  */
-class AppVideoPlayer extends Component {
+class VideoPlayer extends Component {
     constructor(props) {
         super(props);
         this.videoPause = this.videoPause.bind(this)
@@ -207,4 +207,4 @@ class AppVideoPlayer extends Component {
     }
 }
 
-export default AppVideoPlayer;
+export default VideoPlayer;
