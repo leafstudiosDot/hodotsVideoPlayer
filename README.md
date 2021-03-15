@@ -7,12 +7,19 @@ This library was bootstrapped with [Create React App](https://github.com/faceboo
 hodots. Video Player is open source video player by [TuxPenguin09](https://github.com/TuxPenguin09) for his made from scratch video player.
 
 ## Install
-`npm i @leafstudiosteam/hodotsvideoplayer`
+`npm i @leafstudiosteam/hodotsvideoplayer --save`
+
+## React.js Import
+```
+import { VideoPlayer } from '@leafstudiosteam/hodotsvideoplayer';
+import '@leafstudiosteam/hodotsvideoplayer/dist/index.cjs.css';
+```
 
 ## Usage
 ```node
 //Import Libraries
-import VideoPlayer from '@leafstudiosteam/hodotsvideoplayer'
+import { VideoPlayer } from '@leafstudiosteam/hodotsvideoplayer';
+import '@leafstudiosteam/hodotsvideoplayer/dist/index.cjs.css';
 
 <VideoPlayer 
 src={/* Source of the video */}
