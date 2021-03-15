@@ -2,7 +2,7 @@ import babel from '@rollup/plugin-babel';
 import external from 'rollup-plugin-peer-deps-external';
 import del from 'rollup-plugin-delete';
 import pkg from './package.json';
-import css from 'rollup-plugin-css-only';
+import postcss from 'rollup-plugin-postcss';
 import reactjsx from '@babel/plugin-transform-react-jsx';
 
 export default {
@@ -12,7 +12,9 @@ export default {
         { file: pkg.module, format: 'esm' }
     ],
     plugins: [
-        css({ output: 'videoplayer.css' }),
+        postcss({
+            extract: true
+        }),
         external(),
         babel({
             exclude: 'node_modules/**'

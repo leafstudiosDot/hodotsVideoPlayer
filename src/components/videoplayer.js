@@ -1,5 +1,5 @@
 import React, { Component, useEffect, useState, useReducer, useCallback } from 'react';
-import './videoplayer.css'
+import style from'./videoplayer.css'
 
 /**
  * hodots. Video Player
