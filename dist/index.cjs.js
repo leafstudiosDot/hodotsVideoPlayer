@@ -365,4 +365,4 @@ var AppVideoPlayer = /*#__PURE__*/function (_Component) {
   return AppVideoPlayer;
 }(React.Component);
 
-exports.AppVideoPlayer = AppVideoPlayer;
+exports.VideoPlayer = AppVideoPlayer;

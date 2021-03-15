@@ -357,4 +357,4 @@ var AppVideoPlayer = /*#__PURE__*/function (_Component) {
   return AppVideoPlayer;
 }(Component);
 
-export { AppVideoPlayer };
+export { AppVideoPlayer as VideoPlayer };

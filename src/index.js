@@ -16,4 +16,4 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();*/
 
-export {default as AppVideoPlayer} from './components/videoplayer'
+export {default as VideoPlayer} from './components/videoplayer'
