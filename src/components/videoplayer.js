@@ -109,43 +109,6 @@ class VideoPlayer extends Component {
         const videoSrc = src;
         const thumb = thumbplace;
 
-        /*var xhr = new XMLHttpRequest();
-        xhr.responseType = 'blob';
-
-        xhr.onload = function () {
-            var reader = new FileReader();
-            reader.onloadend = function () {
-                var byteCharacters = atob(reader.result.slice(reader.result.indexOf(',') + 1));
-
-                var byteNumbers = new Array(byteCharacters.length);
-
-                for (var i = 0; i < byteCharacters.length; i++) {
-
-                    byteNumbers[i] = byteCharacters.charCodeAt(i);
-
-                }
-
-                var byteArray = new Uint8Array(byteNumbers);
-                var blob = new Blob([byteArray], { type: 'video/mov' });
-                var url = URL.createObjectURL(blob);
-
-                document.getElementById('videoviewport').src = url;
-            }
-            reader.readAsDataURL(xhr.response);
-        }
-        xhr.open('GET', videoSrc);
-        xhr.send();*/
-
-        /*function toggleFlash() {
-            if (localStorage.flashvideo) {
-                localStorage.removeItem('flashvideo')
-                window.location.reload();
-            } else {
-                localStorage.setItem('flashvideo', true)
-                window.location.reload();
-            }
-        }*/
-
         if (this.props.keysDisabled) {
             this.videoPause()
         }
@@ -168,7 +131,7 @@ class VideoPlayer extends Component {
                                 placeholder={thumb}
                                 onClick={this.videotogglePlay.bind(this)}
                                 onTimeUpdate={this.videotimeUpdate.bind(this)}
-                                preload={'none'}
+                                preload={'auto'}
                                 style={{
                                     maxHeight: this.props.maxHeight,
                                 }}
