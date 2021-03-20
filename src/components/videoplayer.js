@@ -132,10 +132,11 @@ class VideoPlayer extends Component {
                                 onClick={this.videotogglePlay.bind(this)}
                                 onTimeUpdate={this.videotimeUpdate.bind(this)}
                                 preload={'auto'}
+                                crossOrigin={"anonymous"}
                                 style={{
                                     maxHeight: this.props.maxHeight,
                                 }}
-                                loop autoPlay />
+                                loop autoPlay playsinline />
                             <div className="controls">
                                 <div ref="videoProgScrub"
                                     onMouseMove={(e) => mousedown && this.videoProgScrub.bind(this)}
