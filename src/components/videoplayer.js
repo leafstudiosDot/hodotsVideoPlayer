@@ -1,5 +1,6 @@
 import React, { Component, useEffect, useState, useReducer, useCallback } from 'react';
 import './videoplayer.css'
+import $ from 'jquery'
 
 /**
  * hodots. Video Player
@@ -15,11 +16,14 @@ class VideoPlayer extends Component {
         this.state = {
             xPos: "0px",
             yPos: "0px",
-            showMenu: false
+            showMenu: false,
+            keysDisabled: this.props.keysDisabled
         }
+        this.KeySettingVideo = this.KeySettingVideo.bind(this)
     }
 
     componentDidMount() {
+        var scope = this
         window.addEventListener('keydown', this.KeySettingVideo)
 
         const Seekbar = document.getElementById("videoprogress-bar")
@@ -37,6 +41,25 @@ class VideoPlayer extends Component {
             const yPos = event.pageY + "px";
             //console.log(xPos + ", " + yPos)
         });
+
+        $(document).click(function (e) {
+            if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+                console.log(e)
+            }
+            var videocon = $(".VideoPost");
+
+            if (!videocon.is(e.target) && videocon.has(e.target).length === 0) {
+                if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+                    console.log("clicked outside")
+                }
+                scope.setState({keysDisabled: true})
+            } else {
+                if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+                    console.log("clicked inside")
+                }
+                scope.setState({keysDisabled: false})
+            }
+        })
     }
 
     ResizeSeeking(e) {
@@ -46,7 +69,8 @@ class VideoPlayer extends Component {
     }
 
     KeySettingVideo(event) {
-        if (!this.props.keysDisabled) {
+        event.preventDefault();
+        if (!this.state.keysDisabled) {
             if (event.keyCode === 37) {
                 this.refs.videoRefer.currentTime -= 5;
             }
