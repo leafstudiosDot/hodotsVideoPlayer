@@ -69,7 +69,7 @@ class VideoPlayer extends Component {
     }
 
     KeySettingVideo(event) {
-        event.preventDefault();
+        /*event.preventDefault();*/
         if (!this.state.keysDisabled) {
             if (event.keyCode === 37) {
                 this.refs.videoRefer.currentTime -= 5;
@@ -78,7 +78,7 @@ class VideoPlayer extends Component {
                 this.refs.videoRefer.currentTime += 5;
             }
             if (event.keyCode === 32) {
-                //event.preventDefault();
+                event.preventDefault();
                 this.videotogglePlay()
             }
         }
