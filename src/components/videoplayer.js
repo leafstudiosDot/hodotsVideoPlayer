@@ -52,12 +52,12 @@ class VideoPlayer extends Component {
                 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
                     console.log("clicked outside")
                 }
-                scope.setState({keysDisabled: true})
+                scope.setState({ keysDisabled: true })
             } else {
                 if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
                     console.log("clicked inside")
                 }
-                scope.setState({keysDisabled: false})
+                scope.setState({ keysDisabled: false })
             }
         })
     }
@@ -139,7 +139,9 @@ class VideoPlayer extends Component {
 
         let mousedown = false;
 
+
         var videoViewportFullTarget = document.getElementById("VideoViewport")
+
 
         function FullscreenOn() {
             //videoViewportFullTarget.requestFullscreen()
