@@ -153,7 +153,6 @@ class VideoPlayer extends Component {
                     <div className="VideoPost" id="VideoViewport">
                         <div className="c-video">{/*Video*/}
                             <video ref="videoRefer" id="videoviewport"
-                                src={videoSrc}
                                 placeholder={thumb}
                                 onClick={this.videotogglePlay.bind(this)}
                                 onTimeUpdate={this.videotimeUpdate.bind(this)}
@@ -162,7 +161,12 @@ class VideoPlayer extends Component {
                                 style={{
                                     maxHeight: this.props.maxHeight,
                                 }}
-                                loop autoPlay playsinline />
+                                loop autoPlay playsinline>
+                                    <source
+                                    src={videoSrc}
+                                    type={'video/mp4'}
+                                    />
+                                </video>
                             <div className="controls">
                                 <div ref="videoProgScrub"
                                     onMouseMove={(e) => mousedown && this.videoProgScrub.bind(this)}
