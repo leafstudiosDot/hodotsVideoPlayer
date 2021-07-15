@@ -83,6 +83,15 @@ video {
     margin-left: 10px;
     user-select: none;
 }
+#close-caption-button {
+    right: 0;
+    position: absolute;
+    font-size: 20px;
+    margin-right: 50px;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+}
 #fullScreenVideo {
     right: 0;
     position: absolute;

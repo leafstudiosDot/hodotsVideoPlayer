@@ -184,6 +184,7 @@ class VideoPlayer extends Component {
                                 <div id="videobuttons">
                                     <button ref="playbtn" id="play-pause" className="pause" onClick={this.videotogglePlay.bind(this)}></button>
                                     <span id="videoTime"><span ref="videoCurrent" /> / <span ref="videoDuration" /></span>
+                                    <span id="close-caption-button">CC</span>
                                     <span id="fullScreenVideo" onClick={() => FullscreenOn()}>&#8597;</span>
                                 </div>
                             </div>
