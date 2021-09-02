@@ -160,6 +160,7 @@ class VideoPlayer extends Component {
                                 crossOrigin={"anonymous"}
                                 style={{
                                     maxHeight: this.props.maxHeight,
+                                    height: "100%",
                                 }}
                                 loop autoPlay playsinline>
                                     <source
