@@ -1,5 +1,11 @@
 This library was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and for React.js developers only.
 
+# Notice to downloaders here!
+Do not install this package in your React project yet, This package development is paused and we are deeply sorry if you have experienced bugs at this package.
+We aren't sure when to resume it's development for the video player.
+
+Sorry for the inconvinience
+
 # hodots. Video Player
 <p align="center">
     <img alt="hodots." src="https://d2yh2dnxo9v5ix.cloudfront.net/logo512.png" width=70>
